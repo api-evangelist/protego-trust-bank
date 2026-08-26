@@ -1,0 +1,103 @@
+generated: '2026-08-26'
+method: probed
+source: >-
+  Direct HTTPS probes of every Protego Trust Bank host on 2026-08-26. No document was
+  retrieved: both the apex and www hosts terminate the TLS handshake with a fatal
+  internal_error alert (SSL alert 80) and present no certificate, so no /.well-known/
+  path could be read. Reproduced from three independent stacks (curl/LibreSSL,
+  OpenSSL s_client, and a headless-Chromium fetch which returned ERR_SSL_PROTOCOL_ERROR).
+  Plain HTTP 301-redirects to the same unreachable HTTPS origin.
+notes: >-
+  status 0 means the connection never completed a TLS handshake, which is different from
+  a 404. Nothing here is evidence that the provider does or does not serve these
+  documents - only that the origin is currently unreachable over HTTPS. No WellKnown or
+  SecurityTxt pointer is emitted because no path returned a document.
+hosts:
+- host: www.protegotrust.com
+  transport_error: 'TLS handshake failed: fatal alert internal_error (80), no peer certificate'
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 0
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 0
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 0
+    file: null
+  - path: /.well-known/api-catalog
+    status: 0
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 0
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 0
+    file: null
+  - path: /.well-known/agent.json
+    status: 0
+    file: null
+- host: protegotrust.com
+  transport_error: 'TLS handshake failed: fatal alert internal_error (80), no peer certificate'
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 0
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 0
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 0
+    file: null
+  - path: /.well-known/api-catalog
+    status: 0
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 0
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 0
+    file: null
+  - path: /.well-known/agent.json
+    status: 0
+    file: null
+- host: protegotrust.co
+  transport_error: 'TLS handshake failed: fatal alert internal_error (80), no peer certificate'
+  documents:
+  - path: /
+    status: 0
+    file: null
+contract_discovery:
+  note: >-
+    STEP 0b contract discovery ran against every known host and missed on every probe.
+    No OpenAPI, Swagger, GraphQL, MCP or A2A surface could be reached.
+  probes:
+  - url: https://www.protegotrust.com/openapi.json
+    status: 0
+  - url: https://www.protegotrust.com/swagger.json
+    status: 0
+  - url: https://www.protegotrust.com/llms.txt
+    status: 0
+  - url: https://www.protegotrust.com/robots.txt
+    status: 0
+  - url: https://www.protegotrust.com/sitemap.xml
+    status: 0
+  - url: https://protegotrust.com/openapi.json
+    status: 0
+  - url: https://protegotrust.com/swagger.json
+    status: 0
+  - url: https://api.protegotrust.com/
+    status: 0
+    note: NXDOMAIN - host does not resolve
+  - url: https://docs.protegotrust.com/
+    status: 0
+    note: NXDOMAIN - host does not resolve
+  - url: https://developer.protegotrust.com/
+    status: 0
+    note: NXDOMAIN - host does not resolve

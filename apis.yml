@@ -1,7 +1,17 @@
 aid: protego-trust-bank
 name: Protego Trust Bank
-description: 'Protego Trust Bank is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Protego Trust Bank is a Seattle, Washington digital-asset trust bank built for institutional
+  clients, offering crypto-asset custody, trading, lending/borrowing and issuer services, with
+  custody-related fiduciary services such as staking-as-a-service, protocol governance and voting,
+  and fork and airdrop handling. Protego Trust Company received OCC conditional approval in
+  February 2021 to convert into a national trust bank; that approval lapsed in February 2023 after
+  pre-conversion requirements were not met. On 13 February 2026 the OCC granted parent Protego
+  Holdings Corporation preliminary conditional approval (Corporate Decision #1366, control number
+  2025-Charter-342009) to charter National Digital Trust Company, Seattle. Protego's marketing
+  material has described API endpoints for trading and liquidity aggregation, but the company
+  publishes no public developer portal, API reference or machine-readable contract, and as of
+  this profile its own web properties do not complete a TLS handshake.
 url: https://raw.githubusercontent.com/api-evangelist/protego-trust-bank/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +22,14 @@ created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Banking
+- Financial Services
+- Digital Assets
+- Cryptocurrency
+- Custody
+- Trust Bank
+- Institutional
+- United States
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +37,36 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/protego-trust-bank-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/protego-trust-bank_stock/
+  url: https://www.protegotrust.com/
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Protego has no reachable web surface at all - protegotrust.com, www.protegotrust.com
+    and protegotrust.co each terminate the TLS handshake with a fatal internal_error
+    alert and present no certificate (Webflow proxy hosts with no provisioned
+    certificate), plain HTTP 301s into that same dead origin, api/docs/developer
+    subdomains do not resolve, and no developer portal, API reference or spec appears at
+    any Protego URL in the public web archive going back to 2020.
+  evidence:
+  - url: https://www.protegotrust.com/
+    status: 0
+  - url: https://www.protegotrust.com/openapi.json
+    status: 0
+  - url: https://www.protegotrust.com/.well-known/agent-card.json
+    status: 0
+  - url: https://api.protegotrust.com/
+    status: 0
+  - url: https://pypi.org/pypi/protego-trust/json
+    status: 404
+  - url: https://api.github.com/orgs/protegotrust
+    status: 200
+  checked: '2026-08-26'

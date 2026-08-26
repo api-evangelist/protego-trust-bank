@@ -1,0 +1,17 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  Attempted to read pricing from the company's own site on 2026-08-26. Every Protego
+  Trust Bank host fails the TLS handshake, so no pricing page could be reached, and no
+  public pricing page is indexed elsewhere. Protego sells institutional custody, trading,
+  lending and issuer services under negotiated agreements.
+plan_count: 0
+plans: []
+notes: >-
+  Zero is a measurement, not a gap in this pass. Protego publishes no public plans or
+  price list; the commercial motion is institutional and contract-negotiated. No Pricing
+  pointer is emitted because no pricing page could be confirmed to exist.
+evidence:
+- url: https://www.protegotrust.com/
+  status: 0
+  detail: TLS handshake failed (fatal alert internal_error, no certificate presented)

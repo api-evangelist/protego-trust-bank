@@ -1,0 +1,22 @@
+generated: '2026-08-26'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.protegotrust.com
+  https: false
+domains:
+- domain: protegotrust.com
+  dnssec: true
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine
+notes: >-
+  Both www.protegotrust.com and protegotrust.com terminate the TLS handshake with a fatal
+  internal_error alert (SSL alert 80) and present no certificate, so https is recorded as
+  false for transport failure rather than for a missing redirect. Plain HTTP 301-redirects
+  to the same unreachable HTTPS origin. Reproduced 2026-08-26 from curl/LibreSSL, OpenSSL
+  s_client, and a headless-Chromium fetch (ERR_SSL_PROTOCOL_ERROR). The hosts are Webflow
+  proxy endpoints (proxy-ssl.webflow.com) whose custom-domain certificate is not
+  provisioned. No CAA record is published; DNSSEC is signed and SPF/DMARC are present, so
+  the zone is actively administered while the web front end is dark.

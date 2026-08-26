@@ -1,0 +1,42 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  Registry searches on 2026-08-26 against npm (registry.npmjs.org search API), PyPI
+  (pypi.org/pypi/<name>/json), and GitHub (org lookup + repo search). No first-party
+  Protego Trust Bank client library was found in any registry.
+package_count: 0
+packages: []
+searched_registries:
+- registry: npm
+  query: protego trust
+  endpoint: https://registry.npmjs.org/-/v1/search?text=protego%20trust
+  status: 200
+  first_party_matches: 0
+- registry: pypi
+  query: protego-trust
+  endpoint: https://pypi.org/pypi/protego-trust/json
+  status: 404
+  first_party_matches: 0
+  note: >-
+    The unrelated PyPI package "Protego" is a robots.txt parser by Scrapy, not a
+    Protego Trust Bank client. Not recorded as first-party.
+- registry: github
+  query: orgs/protegotrust
+  endpoint: https://api.github.com/orgs/protegotrust
+  status: 200
+  first_party_matches: 0
+  note: >-
+    A GitHub account named "protegotrust" exists but publishes 0 public repositories
+    and declares no website, so ownership by this company cannot be verified and no
+    GitHubOrganization pointer is emitted.
+- registry: github-search
+  query: protego trust
+  endpoint: https://api.github.com/search/repositories?q=protego+trust
+  status: 200
+  first_party_matches: 0
+notes: >-
+  Protego's archived marketing material referred to trading and liquidity-aggregation
+  API endpoints for institutional clients, but no SDK, CLI or client library is
+  distributed through any public package registry, and no CDN-distributed build was
+  found. version/published are recorded as absent rather than null-per-entry because
+  there are no entries to record them on.

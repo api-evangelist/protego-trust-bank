@@ -1,0 +1,17 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  Attempted to read published rate limits from the company's developer documentation on
+  2026-08-26. No developer documentation is reachable: every Protego Trust Bank host
+  fails the TLS handshake, and no API reference is published elsewhere.
+limit_count: 0
+limits: []
+response_headers: []
+notes: >-
+  No rate-limit policy, headers, or exhaustion status code could be observed or read.
+  This is an honest zero driven by the absence of any reachable API surface, not by a
+  provider that documents limits we failed to find. No RateLimits pointer is emitted.
+evidence:
+- url: https://www.protegotrust.com/
+  status: 0
+  detail: TLS handshake failed (fatal alert internal_error, no certificate presented)
