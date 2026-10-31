@@ -64,5 +64,91 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Protego Trust Bank is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/protego-trust-bank_stock/
+Protego Trust Bank is a Seattle, Washington digital-asset trust bank built for institutional clients, offering crypto-asset custody, trading, lending/borrowing and issuer services, with custody-related fiduciary services such as staking-as-a-service, protocol governance and voting, and fork and airdrop handling. Protego Trust Company received OCC conditional approval in February 2021 to convert into a national trust bank; that approval lapsed in February 2023 after pre-conversion requirements were not met. On 13 February 2026 the OCC granted parent Protego Holdings Corporation preliminary conditional approval (Corporate Decision #1366, control number 2025-Charter-342009) to charter National Digital Trust Company, Seattle. Protego's marketing material has described API endpoints for trading and liquidity aggregation, but the company publishes no public developer portal, API reference or machine-readable contract, and as of this profile its own web properties do not complete a TLS handshake.
+
+**Areas:** Company · Banking · Financial Services · Digital Assets · Cryptocurrency · Custody · Trust Bank · Institutional · United States
+
+## Protego Trust Bank on APIs.io
+
+Everything profiled for Protego Trust Bank is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/protego-trust-bank/](https://apis.io/providers/protego-trust-bank/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Protego Trust Bank Domain Security](https://apis.io/security/protego-trust-bank/protego-trust-bank-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Protego Trust Bank Plans Pricing](https://apis.io/plans/protego-trust-bank/protego-trust-bank-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Protego Trust Bank Rate Limits](https://apis.io/rate-limits/protego-trust-bank/protego-trust-bank-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.protegotrust.com/)
+
+## API Evangelist rating
+
+**Kin Score 2.1** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 44.6 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 0.0 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 4.7** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/protego-trust-bank/](https://apis.io/providers/protego-trust-bank/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Protego Trust Bank: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/protego-trust-bank/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
